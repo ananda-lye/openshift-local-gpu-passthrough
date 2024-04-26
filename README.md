@@ -19,8 +19,6 @@ Fedora Workstation:
 
 ## 2. Setup Openshift Local
 
-### For Internet connected hosts/mirror:
-
 Openshift Local can be setup easily on the Internet host, following the steps here:
 
 [Get Openshift Local](https://console.redhat.com/openshift/create/local)
@@ -65,7 +63,7 @@ When the web-based console is available, Openshift Local is installed successful
 
 ### For Fully Air-Gapped Hosts:
 
-Copy these files into a removable media:
+Copy these files from the internet mirror into a removable media:
 - crc binary
 - pull secret
 - ~/.crc directory (see below for rsync steps)
