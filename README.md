@@ -180,12 +180,12 @@ sudo grubby --info=DEFAULT
 Output should look similiar to this:
 ```
 index=0
-kernel="/boot/vmlinuz-4.18.0-147.5.1.el8_1.x86_64"
-args="ro crashkernel=auto resume=/dev/mapper/rhel-swap rd.lvm.lv=rhel/root rd.lvm.lv=rhel/swap rhgb quiet $tuned_params"
-root="/dev/mapper/rhel-root"
-initrd="/boot/initramfs-4.18.0-147.5.1.el8_1.x86_64.img $tuned_initrd"
-title="Red Hat Enterprise Linux (4.18.0-147.5.1.el8_1.x86_64) 8.1 (Ootpa)"
-id="1ccc12744a5843daa9e66eda0ed6011b-4.18.0-147.5.1.el8_1.x86_64"
+kernel="/boot/vmlinuz-6.8.6-200.fc39.x86_64"
+args="ro rootflags=subvol=root rhgb quiet amd_iommu=on"
+root="UUID=b50d0db6-f6f9-4a04-92ee-59e0b7a7727f"
+initrd="/boot/initramfs-6.8.6-200.fc39.x86_64.img"
+title="Fedora Linux (6.8.6-200.fc39.x86_64) 39 (Workstation Edition)"
+id="1bf6083ed0104139a7cd628f5754dcb3-6.8.6-200.fc39.x86_64"
 ```
 
 To blacklist Noveau and enable IOMMU, run the following command for Intel systems:
