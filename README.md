@@ -171,7 +171,7 @@ If there is no output, IOMMU is not enabled.
 
 Next, we can enable IOMMU and disable the Nouveau driver by adding arguments to the kernel.
 
-Before we make the changes, we can check the pre-exiting kernel arguments by running:
+Before we make the changes, we can check the pre-existing kernel arguments by running:
 
 ```
 sudo grubby --info=DEFAULT
