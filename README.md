@@ -63,7 +63,7 @@ Optionally, you can copy the `oc` binary into $PATH for persistence.
 
 When the web-based console is available, Openshift Local is installed successfully on the host.
 
-### For Air-Gapped Hosts:
+### For Fully Air-Gapped Hosts:
 
 Copy these files into a removable media:
 - crc binary
