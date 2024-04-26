@@ -249,10 +249,10 @@ sudo lshw -class display -businfo
 
 The output should show the pci information. For example:
 ```
-Bus info          Device      Class          Description
-========================================================
-pci@0000:01:00.0              display        TU104GL [Tesla T4]
-pci@0000:00:02.0              display        HD Graphics 630
+Bus info          Device          Class          Description
+============================================================
+pci@0000:01:00.0                  display        GA106M [GeForce RTX 3060 Mobile
+pci@0000:06:00.0                  display        Cezanne [Radeon Vega Series / R
 ```
 
 From the above, we know to passthrough `pci@0000:01:00.0`.
