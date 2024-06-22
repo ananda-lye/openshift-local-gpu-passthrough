@@ -375,7 +375,7 @@ Guide for this setup  will be included in the near future.
 
 Login to the cluster console, by running `crc console` and logging in as `kubeadmin`. 
 
-From the `Administrator` view, click Operators > OperatorHub. Search and install the `NVIDIA GPU Operator`.
+From the `Administrator` view, click Operators > OperatorHub. Search and install the `NVIDIA GPU Operator` and the `Node Feature Discovery` operator.
 
 Once installed, go to Operators > Installed Operators. Click on `ClusterPolicy` tab and create a ClusterPolicy.  The default values are sufficient to start the driver.
 
