@@ -203,6 +203,17 @@ Check the kernel arguments again to see if they were appended properly by re-run
 sudo grubby --info=DEFAULT
 ```
 
+Create the `/usr/lib/modprobe.d/blacklist-nouveau.conf` file and add the following information to the file:
+blacklist nouveau
+
+```
+options nouveau modeset=0
+```
+
+Re-generate initramfs.
+```
+$ sudo dracut --force
+```
 Reboot the machine.
 
 After rebooting, check if IOMMU is enabled by re-running:
@@ -285,6 +296,8 @@ Take note of the address domain information from the output. For example:
   </capability>
 </device>
 ```
+
+Also take note of the driver section of the ouput. It should list `vfio-pci` instead of `noveau`. 
 
 We can focus on the address domain from the above, in this snippet:
 ```
