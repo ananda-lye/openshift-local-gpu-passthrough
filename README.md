@@ -202,6 +202,7 @@ Check the kernel arguments again to see if they were appended properly by re-run
 ```
 sudo grubby --info=DEFAULT
 ```
+For nouveau to be blacklisted, we also have to add the following.
 
 Create the `/usr/lib/modprobe.d/blacklist-nouveau.conf` file and add the following information to the file:
 ```
@@ -210,7 +211,7 @@ blacklist nouveau
 options nouveau modeset=0
 ```
 
-Re-generate initramfs.
+Re-generate initramfs to apply the changes. It may take up to 5 minutes for the command to complete.
 ```
 $ sudo dracut --force
 ```
@@ -298,7 +299,7 @@ Take note of the address domain information from the output. For example:
 </device>
 ```
 
-Also take note of the driver section of the ouput. It should list `vfio-pci` instead of `noveau`. 
+Also take note of the driver section of the ouput. It should list `vfio-pci` instead of `nouveau`. 
 
 We can focus on the address domain from the above, in this snippet:
 ```
