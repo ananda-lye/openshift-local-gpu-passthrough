@@ -204,9 +204,9 @@ sudo grubby --info=DEFAULT
 ```
 
 Create the `/usr/lib/modprobe.d/blacklist-nouveau.conf` file and add the following information to the file:
+```
 blacklist nouveau
 
-```
 options nouveau modeset=0
 ```
 
@@ -214,6 +214,7 @@ Re-generate initramfs.
 ```
 $ sudo dracut --force
 ```
+
 Reboot the machine.
 
 After rebooting, check if IOMMU is enabled by re-running:
